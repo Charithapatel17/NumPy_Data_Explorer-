@@ -1,0 +1,11 @@
+# Ignore Python cache and temp files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.npy
+.ipynb_checkpoints/
+
+# Ignore virtual environments
+venv/
+env/
