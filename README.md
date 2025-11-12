@@ -1,7 +1,7 @@
 # NumPy Data Explorer
 **Syntecxhub Data Science Internship – Week 1**
 
-## 📘 Overview
+## Overview
 This project explores the core features of **NumPy**, including:
 - Array creation and manipulation
 - Indexing and slicing
@@ -10,23 +10,23 @@ This project explores the core features of **NumPy**, including:
 - Saving/loading arrays
 - Performance comparison with Python lists
 
-## 🧠 Objective
+## Objective
 To understand how NumPy improves data manipulation performance and efficiency compared to standard Python operations.
 
-## 🧩 Requirements
+## Requirements
 ```
 pip install numpy
 ```
 
-## ▶️ How to Run
+## How to Run
 ```
 python numpy_data_explorer.py
 ```
 
-## 📊 Output Includes
+## Output Includes
 - Array operations demonstration  
 - Axis-wise mathematical operations  
 - Reshaping and broadcasting example  
 - NumPy vs Python list performance timing
 
-✅ **Task Completed Successfully!**
+ **Task Completed Successfully!**
