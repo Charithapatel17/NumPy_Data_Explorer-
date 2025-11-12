@@ -1,0 +1,68 @@
+import numpy as np
+import time
+
+#  Array Creation
+print("=== ARRAY CREATION ===")
+a = np.array([1, 2, 3, 4, 5])
+b = np.arange(10)             # 0 to 9
+c = np.linspace(0, 1, 5)      # 5 evenly spaced numbers from 0 to 1
+print("Array a:", a)
+print("Array b:", b)
+print("Array c:", c)
+
+#  Indexing and Slicing
+print("\n=== INDEXING & SLICING ===")
+print("b[2] =", b[2])     # Access single element
+print("b[2:6] =", b[2:6]) # Slice 2 to 5
+print("b[-3:] =", b[-3:]) # Last 3 elements
+
+#  Mathematical Operations
+print("\n=== MATH OPERATIONS ===")
+print("a + 10 =", a + 10)
+print("a * 2 =", a * 2)
+print("a ** 2 =", a ** 2)
+
+#  Axis-wise Operations
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+print("\n=== AXIS-WISE OPERATIONS ===")
+print("Matrix:\n", matrix)
+print("Sum (axis=0):", matrix.sum(axis=0))
+print("Mean (axis=1):", matrix.mean(axis=1))
+
+#  Reshaping and Broadcasting
+print("\n=== RESHAPING & BROADCASTING ===")
+arr = np.arange(6)
+reshaped = arr.reshape(2, 3)
+print("Original:", arr)
+print("Reshaped:\n", reshaped)
+
+# Broadcasting example
+x = np.array([[1], [2], [3]])   # shape (3,1)
+y = np.array([10, 20, 30])      # shape (3,)
+print("x + y (broadcasted):\n", x + y)
+
+#  Save and Load Arrays
+print("\n=== SAVE & LOAD ===")
+np.save('array_saved.npy', a)
+loaded = np.load('array_saved.npy')
+print("Saved and Loaded Array:", loaded)
+
+#  NumPy vs Python List Performance
+print("\n=== PERFORMANCE COMPARISON ===")
+size = 1_000_000
+list_data = list(range(size))
+array_data = np.arange(size)
+
+# Python list
+start = time.time()
+list_result = [x * 2 for x in list_data]
+end = time.time()
+print(f"List processing time: {end - start:.5f} sec")
+
+# NumPy array
+start = time.time()
+array_result = array_data * 2
+end = time.time()
+print(f"NumPy processing time: {end - start:.5f} sec")
+
+print("\n✅ Task Completed Successfully!")
